@@ -26,12 +26,6 @@ type BookRequest struct {
 	Genre         string `json:"genre,omitempty"`
 }
 
-type BookGroup struct {
-	GroupKey string `json:"group_key"`
-	Count    int    `json:"count"`
-	Books    []Book `json:"books"`
-}
-
 func (b *BookRequest) Validate() error {
 	if b.Title == "" {
 		return fmt.Errorf("title is required")

@@ -154,7 +154,6 @@ func listBooks(client *api.APIClient, args []string) {
 	limit := fs.Int("limit", 0, "Limit number of results")
 	offset := fs.Int("offset", 0, "Offset for pagination")
 
-	// Book-specific filters
 	author := fs.String("author", "", "Filter by author")
 	genre := fs.String("genre", "", "Filter by genre")
 	publishedAfter := fs.String("published-after", "", "Filter by publication date (after)")
@@ -164,12 +163,10 @@ func listBooks(client *api.APIClient, args []string) {
 		log.Fatalf("Error parsing flags: %v", err)
 	}
 
-	// Validate numeric params
 	if *limit < 0 || *offset < 0 {
 		log.Fatal("Limit and offset must be positive numbers")
 	}
 
-	// Validate dates
 	if *publishedAfter != "" {
 		if _, err := time.Parse("2006-01-02", *publishedAfter); err != nil {
 			log.Fatalf("Invalid published-after date format: %v", err)
