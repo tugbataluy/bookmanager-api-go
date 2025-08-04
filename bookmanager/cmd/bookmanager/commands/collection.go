@@ -208,7 +208,7 @@ func updateCollection(client *api.APIClient, args []string) {
 		os.Exit(1)
 	}
 
-	currentBody, err := client.Get(fmt.Sprintf("/collections/%d", id), nil)
+	currentBody, err := client.Get(fmt.Sprintf("/v1/collections/%d", id), nil)
 	if err != nil {
 		log.Fatalf("Error getting current collection: %v", err)
 	}
