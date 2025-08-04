@@ -1,0 +1,29 @@
+classDiagram
+    class Book {
+        +id: INTEGER
+        +title: VARCHAR(255)
+        +author: VARCHAR(255)
+        +published_date: DATE
+        +edition: INTEGER
+        +description: TEXT
+        +genre: VARCHAR(100)
+        +created_at: TIMESTAMP
+        +updated_at: TIMESTAMP
+    }
+
+    class Collection {
+        +id: INTEGER
+        +name: VARCHAR(255)
+        +description: TEXT
+        +created_at: TIMESTAMP
+        +updated_at: TIMESTAMP
+    }
+
+    class CollectionBook {
+        +collection_id: INTEGER
+        +book_id: INTEGER
+        +created_at: TIMESTAMP
+    }
+
+    Book "1" -- "0..*" CollectionBook : contains
+    Collection "1" -- "0..*" CollectionBook : has
