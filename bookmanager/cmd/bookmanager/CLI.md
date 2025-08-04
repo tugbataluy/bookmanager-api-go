@@ -2,6 +2,8 @@
 
 A modern command-line interface for managing your books and collections via the BookManager API.
 
+## Warning
+**- Where clause command is vulnerable to SQL injection, use carefully !!!**
 ---
 
 ## Building
@@ -15,6 +17,7 @@ go build -o bookmanager bin/cli ./cmd/bookmanager
 ```
 
 ---
+
 
 ## Usage
 
@@ -300,7 +303,7 @@ Books in collection #3:
 ```
 **Output:**
 ```
-./Removed book #10 from collection #3
+Removed book #10 from collection #3
 ```
 
 #### Group Collections
@@ -322,7 +325,7 @@ Collections grouped by description:
 ```
 **Output:**
 ```
-./Updated collection #3: Foundation Of CS
+Updated collection #3: Foundation Of CS
 ```
 
 #### Patch a Collection
