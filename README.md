@@ -4,7 +4,7 @@ Rest API implementation for book manager database facilitates UX with CLI suppor
 
 - RESTful API for managing books
 - CLI support for common operations
-- Modular project structure (handlers, db, api, cli vb.)
+- Modular project structure (handlers, db, api, cli etc.)
 - Easy integration with PostgreSQL
 
 ## Getting Started
