@@ -81,7 +81,7 @@ Commands:
 #### Create a Book
 
 ```sh
-bookmanager book create --title "The Go Programming Language" \
+./bookmanager book create --title "The Go Programming Language" \
     --author "Alan A. A. Donovan & Brian W. Kernighan" \
     --published-date "2015-10-26" \
     --edition 1 \
@@ -96,7 +96,7 @@ Created book 8: The Go Programming Language by Alan A. A. Donovan & Brian W. Ker
 #### List All Books
 
 ```sh
-bookmanager book list
+./bookmanager book list
 ```
 **Output:**
 ```
@@ -112,7 +112,7 @@ bookmanager book list
 #### Filter Books by Genre
 
 ```sh
-bookmanager book list --genre "Software Engineering"
+./bookmanager book list --genre "Software Engineering"
 ```
 **Output:**
 ```
@@ -125,7 +125,7 @@ bookmanager book list --genre "Software Engineering"
 #### Filter Books by Author
 
 ```sh
-bookmanager book list --author "Frank Herbert"
+./bookmanager book list --author "Frank Herbert"
 ```
 **Output:**
 ```
@@ -138,7 +138,7 @@ bookmanager book list --author "Frank Herbert"
 #### Group Books by Genre
 
 ```sh
-bookmanager book list --group-by genre
+./bookmanager book list --group-by genre
 ```
 **Output:**
 ```
@@ -152,7 +152,7 @@ Books grouped by genre:
 #### Combine List Commands
 
 ```sh
-bookmanager book list --limit 4 --order-by "title DESC"
+./bookmanager book list --limit 4 --order-by "title DESC"
 ```
 **Output:**
 ```
@@ -165,7 +165,7 @@ bookmanager book list --limit 4 --order-by "title DESC"
 #### Get Book Details
 
 ```sh
-bookmanager book get 3
+./bookmanager book get 3
 ```
 **Output:**
 ```
@@ -181,7 +181,7 @@ Genre: Science Fiction
 #### Delete a Book
 
 ```sh
-bookmanager book delete 13
+./bookmanager book delete 13
 ```
 **Output:**
 ```
@@ -191,7 +191,7 @@ Deleted book #13
 #### Update a Book
 
 ```sh
-bookmanager book update 10 --title "Design Patterns: Elements of Reusable Object-Oriented Software" \
+./bookmanager book update 10 --title "Design Patterns: Elements of Reusable Object-Oriented Software" \
     --author "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides" \
     --published-date "1994-10-31" \
     --edition 2 \
@@ -206,7 +206,7 @@ Updated book #10: Design Patterns: Elements of Reusable Object-Oriented Software
 #### Patch a Book
 
 ```sh
-bookmanager book patch 10 --author "Erich Gamma, Richard Helm, Ralph Johnson, Me"
+./bookmanager book patch 10 --author "Erich Gamma, Richard Helm, Ralph Johnson, Me"
 ```
 **Output:**
 ```
@@ -254,7 +254,7 @@ Commands:
 #### List All Collections
 
 ```sh
-bookmanager collection list
+./bookmanager collection list
 ```
 **Output:**
 ```
@@ -265,7 +265,7 @@ bookmanager collection list
 #### Create a Collection
 
 ```sh
-bookmanager collection create --name "Computer Science Classics"
+./bookmanager collection create --name "Computer Science Classics"
 ```
 **Output:**
 ```
@@ -275,7 +275,7 @@ Created collection #3:Computer Science Classics
 #### Add Book to Collection
 
 ```sh
-bookmanager collection add-book 3 10
+./bookmanager collection add-book 3 10
 ```
 **Output:**
 ```
@@ -285,7 +285,7 @@ Added book #10 to collection #3
 #### List Books in a Collection
 
 ```sh
-bookmanager collection list-books 3
+./bookmanager collection list-books 3
 ```
 **Output:**
 ```
@@ -296,17 +296,17 @@ Books in collection #3:
 #### Remove Book from Collection
 
 ```sh
-bookmanager collection remove-book 3 10
+./bookmanager collection remove-book 3 10
 ```
 **Output:**
 ```
-Removed book #10 from collection #3
+./Removed book #10 from collection #3
 ```
 
 #### Group Collections
 
 ```sh
-bookmanager collection list --group-by "description"
+./bookmanager collection list --group-by "description"
 ```
 **Output:**
 ```
@@ -318,17 +318,17 @@ Collections grouped by description:
 #### Update a Collection
 
 ```sh
-bookmanager collection update 3 --name "Foundation Of CS" --description "Computer science books for enthusiast"
+./bookmanager collection update 3 --name "Foundation Of CS" --description "Computer science books for enthusiast"
 ```
 **Output:**
 ```
-Updated collection #3: Foundation Of CS
+./Updated collection #3: Foundation Of CS
 ```
 
 #### Patch a Collection
 
 ```sh
-bookmanager collection patch 3 --description "Books for CS enthusiasts"
+./bookmanager collection patch 3 --description "Books for CS enthusiasts"
 ```
 **Output:**
 ```
@@ -338,7 +338,7 @@ Successfully patched collection #3
 #### Delete a Collection
 
 ```sh
-bookmanager --verbose collection delete 3
+./bookmanager --verbose collection delete 3
 ```
 **Output:**
 ```
@@ -353,7 +353,7 @@ Deleted collection #3
 For more information on any command, use:
 
 ```sh
-bookmanager <command> --help
+./bookmanager <command> --help
 ```
 
 ---
